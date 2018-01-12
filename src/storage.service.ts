@@ -9,20 +9,24 @@ export type StorageKeyValue = {
 export class StorageService {
   
   private _currentBase: string
-  private local: Storage
+  private _local: Storage
   
   constructor(
     private config: ConfigService,
     private userConfig: UserConfig,
   ) {
     this.config.init(userConfig)
-    this.local = this.config.makeStorage()
+    this._local = this.config.makeStorage()
     this._currentBase = this.config.databases[0]
   }
   
   find(key: string): any {
     const storeMap: StorageKeyValue = this.findAll()
     return storeMap[key]
+  }
+  
+  has(key: string): boolean {
+    return this.find(key) !== undefined
   }
   
   remove(key: string): void {
@@ -37,11 +41,11 @@ export class StorageService {
     const nextStoreMap: string = JSON.stringify(
       Object.assign({}, storeMap, { [key]: value }),
     )
-    this.local.setItem(this._currentBase, nextStoreMap)
+    this._local.setItem(this._currentBase, nextStoreMap)
   }
   
   findAll(): StorageKeyValue {
-    const storeValue: string = this.local.getItem(this._currentBase) || '{}'
+    const storeValue: string = this._local.getItem(this._currentBase) || '{}'
     let storeMap: StorageKeyValue = {}
     try {
       storeMap = JSON.parse(storeValue)
@@ -53,7 +57,7 @@ export class StorageService {
   
   replaceAll(store: StorageKeyValue): void {
     const nextStoreMap: string = JSON.stringify(store)
-    this.local.setItem(this._currentBase, nextStoreMap)
+    this._local.setItem(this._currentBase, nextStoreMap)
   }
   
   updateAll(store: StorageKeyValue): void {
@@ -61,7 +65,7 @@ export class StorageService {
     const nextStoreMap: string = JSON.stringify(
       Object.assign({}, storeMap, store)
     )
-    this.local.setItem(this._currentBase, nextStoreMap)
+    this._local.setItem(this._currentBase, nextStoreMap)
   }
   
   use(database: string): StorageService {
@@ -72,7 +76,7 @@ export class StorageService {
   }
   
   destroy(database?: string): void {
-    this.local.removeItem(database || this._currentBase)
+    this._local.removeItem(database || this._currentBase)
   }
   
   implode(): void {
