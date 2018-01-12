@@ -16,6 +16,5 @@ export class StorageModule {
       ],
     }
   }
-  
 }
 export { StorageService, StorageConfig }

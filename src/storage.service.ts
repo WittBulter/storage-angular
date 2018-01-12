@@ -63,7 +63,7 @@ export class StorageService {
   updateAll(store: StorageKeyValue): void {
     const storeMap: StorageKeyValue = this.findAll()
     const nextStoreMap: string = JSON.stringify(
-      Object.assign({}, storeMap, store)
+      Object.assign({}, storeMap, store),
     )
     this._local.setItem(this._currentBase, nextStoreMap)
   }

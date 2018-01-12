@@ -13,6 +13,14 @@ export class DefaultConfig {
 }
 
 @Injectable()
+export class UserConfig {
+}
+
+@Injectable()
+export class WindowWrapper extends Window {
+}
+
+@Injectable()
 export class ConfigService extends DefaultConfig {
   
   constructor(
@@ -46,12 +54,3 @@ export class ConfigService extends DefaultConfig {
   }
   
 }
-
-@Injectable()
-export class UserConfig {
-}
-
-@Injectable()
-export class WindowWrapper extends Window {
-}
-

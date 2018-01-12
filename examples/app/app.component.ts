@@ -17,6 +17,15 @@ export class ExAppComponent {
   }
   
   ngOnInit(): void {
+    this.storage.insert('name', 'witt')
+    console.log(this.storage.find('name'))
+    
+    this.storage.insert('age', '24')
+    console.log(this.storage.findAll())
+    
+    this.storage.remove('name')
+    console.log(this.storage.has('name'))
+    
   }
   
 }
