@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "lib": ["es2015", "dom"],
+    "module": "es2015",
+    "moduleResolution": "node",
+    "declaration": true,
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "stripInternal": true,
+    "outDir": "release/",
+    "sourceMap": true,
+    "inlineSources": true,
+    "skipLibCheck": true
+  },
+  "files": [
+    "src/storage.module.ts"
+  ],
+  "compileOnSave": false,
+  "angularCompilerOptions": {
+    "strictMetadataEmit": true,
+    "annotateForClosureCompiler": true,
+    "flatModuleId": "storage-angular",
+    "skipTemplateCodegen": true
+  },
+  "exclude": [
+    "examples",
+    "release",
+    "bundle",
+    "build"
+  ],
+  "typeRoots": [
+    "../node_modules/@types"
+  ]
+}
