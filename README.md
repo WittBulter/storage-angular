@@ -1,4 +1,9 @@
-## storage-angular
+<div align="center">
+<img src="logo.png" width="250" height="120" align="center">
+</div>
+
+<h4 align="center"> Storage NG </h4>
+<br><br>
 A fast and easy to use Angular storage module.
 
 > whenever i use Angular, i can't find a simple storage module at all, there are a variety of bugs in the popular storage repo,
