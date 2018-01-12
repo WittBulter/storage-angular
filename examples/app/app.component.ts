@@ -1,5 +1,6 @@
 import { Component } from '@angular/core'
 import { AppService } from './app.service'
+import { StorageService } from '../../src/storage.module'
 
 @Component({
   selector: 'ex-app',
@@ -11,6 +12,7 @@ export class ExAppComponent {
   
   constructor(
     private appService: AppService,
+    private storage: StorageService,
   ) {
   }
   
