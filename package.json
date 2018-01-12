@@ -2,7 +2,7 @@
   "name": "storage-angular",
   "version": "0.0.1",
   "description": "A fast and easy to use Angular storage module.",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "start": "env DEBUG=true webpack-dev-server --config build/webpack.dev.js --inline --progress --port 1338",
     "build": "node_modules/gulp/bin/gulp.js build",
@@ -13,6 +13,11 @@
     "type": "git",
     "url": "git+https://github.com/DhyanaChina/storage-angular.git"
   },
+  "files": [
+    "release",
+    "bundle",
+    "index.ts"
+  ],
   "keywords": [
     "storage",
     "angular",
