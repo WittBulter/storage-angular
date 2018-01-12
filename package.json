@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "commit": "node_modules/commitizen/bin/commitizen init cz-conventional-changelog --save --save-exact",
-    "commitmsg": "node_modules/commitizen/bin/commitlint -e $GIT_PARAMS"
+    "commitmsg": "node_modules/commitlint/cli.js -e $GIT_PARAMS"
   },
   "repository": {
     "type": "git",
