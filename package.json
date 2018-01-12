@@ -13,6 +13,11 @@
     "type": "git",
     "url": "git+https://github.com/DhyanaChina/storage-angular.git"
   },
+  "files": [
+    "release",
+    "bundle",
+    "index.ts"
+  ],
   "keywords": [
     "storage",
     "angular",

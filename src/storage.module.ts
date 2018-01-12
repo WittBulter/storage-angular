@@ -1,7 +1,7 @@
 import { ModuleWithProviders, NgModule } from '@angular/core'
 import { ConfigService, WindowWrapper, StorageConfig, UserConfig } from './config.service'
 import { StorageService } from './storage.service'
-export const getWindow = (): Window => window
+export function getWindow(): Window { return window }
 
 @NgModule()
 export class StorageModule {
