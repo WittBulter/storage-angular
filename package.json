@@ -1,0 +1,39 @@
+{
+  "name": "storage-angular",
+  "version": "0.0.1",
+  "description": "A fast and easy to use Angular storage module.",
+  "main": "index.js",
+  "scripts": {
+    "commit": "node_modules/commitizen/bin/commitizen init cz-conventional-changelog --save --save-exact",
+    "commitmsg": "node_modules/commitizen/bin/commitlint -e $GIT_PARAMS"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DhyanaChina/storage-angular.git"
+  },
+  "keywords": [
+    "storage",
+    "angular",
+    "store",
+    "localStorage"
+  ],
+  "author": "DhyanaChina",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DhyanaChina/storage-angular/issues"
+  },
+  "homepage": "https://github.com/DhyanaChina/storage-angular#readme",
+  "devDependencies": {
+    "@commitlint/config-angular": "^6.0.2",
+    "commitizen": "^2.9.6",
+    "commitlint": "^6.0.2",
+    "cz-conventional-changelog": "^2.1.0",
+    "husky": "^0.14.3",
+    "typescript": "^2.6.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
